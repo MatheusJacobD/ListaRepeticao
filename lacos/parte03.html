@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade3</title>
+</head>
+<body>
+    <input type="text" id="idCoca" placeholder="Estimativa">
+    
+    <button onclick="exibir()">Ver quantidade</button>
+
+    <div id="idResultado"></div>
+</body>
+<script>
+    function exibir(){
+        let qtd = Number(idCoca.value);
+
+        idResultado.innerHTML = `<br><br>`;
+
+        for(let i = 1; i <= qtd; i++){
+            idResultado.innerHTML += `${i}: `;
+
+            idResultado.innerHTML += "<img src='milk.png' style='max-width: 3%; height: auto;'>";
+
+            idResultado.innerHTML += "<img src='coffee.png' style='max-width: 3%; height: auto;'>";
+            idResultado.innerHTML += "<img src='coffee.png' style='max-width: 3%; height: auto;'>";
+
+            idResultado.innerHTML += `<br><br><br><br>`;
+        }
+    }
+</script>
+</html>

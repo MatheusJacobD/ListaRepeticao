@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade2</title>
+</head>
+<body>
+    <input type="text" id="idCoca" placeholder="Estimativa">
+    
+    <button onclick="exibir()">Ver quantidade</button>
+
+    <div id="idResultado"></div>
+</body>
+<script>
+    function exibir(){
+        let qtd = Number(idCoca.value);
+        idResultado.innerHTML = `<br><br>`;
+        for(let i = 1; i <= qtd; i++){
+            idResultado.innerHTML += "<img src='coca.png' style='max-width: 3%; height: auto;'>";
+        }
+    }
+</script>
+</html>

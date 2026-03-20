@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade1</title>
+</head>
+<body>
+    <input type="text" id="idPassageiros" placeholder="Digite a qtd de passageiros"> <br>
+    <input type="text" id="idLimite" placeholder="Digite o limite de passageiros">
+
+    <button onclick="partir()">#PartiuCarona</button>
+
+    <div id="idResultado"></div>
+</body>
+<script>
+    function partir(){
+        let pass = Number(idPassageiros.value);
+        let limite = Number(idLimite.value);
+
+        for(let i = 1; i <= pass; i++){
+            if(i <= limite){
+                if(i == 1){
+                    idResultado.innerHTML += `Entrou o ${i}º passageiro (motorista)`;
+                } else {
+                    idResultado.innerHTML += `<br>Entrou o ${i}º passageiro`;
+                }
+            } else {
+                idResultado.innerHTML += `<br>O ${i}º passageiro terá que esperar!`;
+            }
+        }
+    }
+</script>
+</html>

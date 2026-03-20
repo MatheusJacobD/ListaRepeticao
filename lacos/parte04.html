@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade4</title>
+</head>
+
+<body>
+    <input type="text" id="idDepositos" placeholder="qtd de depositos">
+
+    <input type="text" id="idValor" placeholder="valor dos depositos">
+
+    <button onclick="acompanhar()">Acompanhar grana</button>
+
+    <div id="idResultado"></div>
+</body>
+<script>
+    function acompanhar() {
+        let qtd = Number(idDepositos.value);
+        let valor = Number(idValor.value);
+
+        let parcela = valor / qtd;
+
+        let valorParcela = 0;
+
+        let count = 0;
+
+        for (let i = 1; i <= qtd; i++) {
+            valorParcela += parcela;
+            count++;
+
+            if (count == 3) {
+                valorParcela += valorParcela * 0.01;
+
+                count = 0;
+
+                idResultado.innerHTML += `${i}º Mês: R$ ${valorParcela}🌟<br>`;
+            } else {
+                idResultado.innerHTML += `${i}º Mês: R$ ${valorParcela}<br>`;
+            }
+        }
+    }
+</script>
+
+</html>
